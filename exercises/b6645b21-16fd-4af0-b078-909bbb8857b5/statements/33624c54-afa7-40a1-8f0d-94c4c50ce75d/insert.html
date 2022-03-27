@@ -1,0 +1,49 @@
+<p>El lenguaje SQL dispone de una serie de sentencias para la edici&oacute;n (inserci&oacute;n, actualizaci&oacute;n y borrado) de los datos almacenados en una base de datos. Ese conjunto de sentencias recibe el nombre de <em>Data Manipulation Language</em> (DML).</p>
+
+<p>La sentencia <code><em>INSERT</em></code> permite la inserci&oacute;n de nuevas filas o registros en un tabla existente.</p>
+
+<h3>Sintaxis</h3>
+
+<p>El formato m&aacute;s sencillo de utilizaci&oacute;n de la sentencia <code><em>INSERT</em></code> tiene la siguiente sintaxis:</p>
+
+<blockquote>
+<pre>
+<code><strong>INSERT INTO </strong>nombre_tabla (lista_campos)
+<strong>VALUES </strong>(lista_valores);</code></pre>
+</blockquote>
+
+<p>Donde <em>nombre_tabla</em> ser&aacute; el nombre de la tabla en la que quieras a&ntilde;adir nuevos registros. En lista_campos se indicar&aacute;n los campos de dicha tabla en los que se desea escribir los nuevos valores indicados en <em>lista_valores</em>. Es posible omitir la lista de campos (<em>lista_campos</em>), si se indican todos los valores de cada campo y en el orden en el que se encuentran en la tabla.</p>
+
+<p>Tanto la lista de campos <em>lista_campos</em> como la de valores <em>lista_valores</em>, tendr&aacute;n separados por comas cada uno de sus elementos. Hay que tener en cuenta tambi&eacute;n que cada campo de <em>lista_campos</em> debe tener un valor v&aacute;lido en la posici&oacute;n correspondiente de la <em>lista_valores</em> (Si no recuerdas los valores v&aacute;lidos para cada campo puedes utilizar la sentencia <code><em>DESCRIBE</em></code> seguida del nombre de la tabla que deseas consultar).</p>
+
+<h3>Ejemplo</h3>
+
+<p>Vamos a comenzar insertando Espa&ntilde;a entre la lista de pa&iacute;ses.</p>
+
+<blockquote>
+<p><code>INSERT INTO countries (COUNTRY_ID, COUNTRY_NAME, REGION_ID)<br />
+VALUES (&#39;ES&#39;, &#39;Espa&ntilde;a&#39;, 1)</code></p>
+</blockquote>
+
+<h3>Ejercicio</h3>
+
+<p>Crea el departamento de &#39;Desarrollo Web&#39; con los siguientes datos:</p>
+
+<table align="center" border="1" summary="Results from query 1">
+	<tbody>
+		<tr>
+			<th style="background-color:#9e9e9e">DEPARTMENT_ID</th>
+			<th style="background-color:#9e9e9e">DEPARTMENT_NAME</th>
+			<th style="background-color:#9e9e9e">MANAGER_ID</th>
+			<th style="background-color:#9e9e9e">LOCATION_ID</th>
+		</tr>
+		<tr>
+			<td>280</td>
+			<td>Desarrollo Web</td>
+			<td>103</td>
+			<td>1700</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><em><small><strong>Nota</strong>: recuerda que en Juez-LTI debes cualificar las tablas con el esquema HR</small></em></p>
