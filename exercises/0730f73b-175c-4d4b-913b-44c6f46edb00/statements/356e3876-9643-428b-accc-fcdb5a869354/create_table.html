@@ -1,0 +1,64 @@
+<p>Los objetos b&aacute;sicos con los que trabaja SQL para almacenar los datos son las <strong>tablas</strong>, que como ya sabemos son un conjunto de <em>filas</em> y <em>columnas</em> cuya intersecci&oacute;n se llama <em>celda</em>. Es ah&iacute; donde se almacenar&aacute;n los elementos de informaci&oacute;n, los datos que queremos recoger.</p>
+
+<p>Antes de crear la tabla es conveniente planificar algunos detalles:</p>
+
+<ul>
+	<li><strong>Qu&eacute; nombre</strong> le vamos a dar <strong>a la tabla</strong>.</li>
+	<li><strong>Qu&eacute; nombre</strong> le vamos a dar a cada una de las <strong>columnas</strong>.</li>
+	<li><strong>Qu&eacute; tipo y tama&ntilde;o de datos</strong> vamos a almacenar en cada columna.</li>
+	<li><strong>Qu&eacute; restricciones</strong> tenemos sobre los datos.</li>
+	<li>Alguna otra <strong>informaci&oacute;n adicional</strong> que necesitemos.</li>
+</ul>
+
+<p>Y debemos tener en cuenta otras <strong>reglas</strong> que se deben cumplir <strong>para los nombres de las tablas</strong>:</p>
+
+<ul>
+	<li>No podemos tener nombres de tablas duplicados en un mismo esquema (usuario).</li>
+	<li>Deben comenzar por un car&aacute;cter alfab&eacute;tico.</li>
+	<li>Su longitud m&aacute;xima es de 30 caracteres.</li>
+	<li>Solo se permiten letras del alfabeto ingl&eacute;s, d&iacute;gitos o el signo de gui&oacute;n bajo.</li>
+	<li>No puede coincidir con las palabras reservadas de SQL (por ejemplo, no podemos llamar a una tabla WHERE).</li>
+	<li>No se distingue entre may&uacute;sculas y min&uacute;sculas.</li>
+	<li>En el caso de que el nombre tenga espacios en blanco o caracteres nacionales (permitido s&oacute;lo en algunas bases de datos), entonces se suele entrecomillar con comillas dobles. En el est&aacute;ndar SQL99 (respetado por Oracle) se pueden utilizar comillas dobles al poner el nombre de la tabla a fin de hacerla sensible a las may&uacute;sculas (se diferenciar&aacute; entre &quot;USUARIOS&quot;y &quot;Usuarios&quot;).</li>
+</ul>
+
+<h3>Sintaxis</h3>
+
+<p>La sintaxis b&aacute;sica del comando que permite crear una tabla es la siguiente:</p>
+
+<blockquote>
+<pre>
+<code>CREATE TABLE [esquema.] nombredeTabla (
+	columna1 Tipo_Dato,
+	columna2 Tipo_Dato,
+	...
+	columnaN Tipo_Dato );</code></pre>
+</blockquote>
+
+<p>donde:</p>
+
+<ul>
+	<li><strong>columna1, columna2, ..., columnaN</strong> son los nombres de las columnas que contendr&aacute; la tabla.</li>
+	<li><strong>Tipo_Dato</strong> indica el tipo de dato de cada columna.</li>
+</ul>
+
+<h3>Ejemplo:</h3>
+
+<p>Para crear una tabla llamada <strong>ALUMNOS</strong> con dos campos de tipo <code>VARCHAR2</code>:</p>
+
+<blockquote>
+<pre>
+<code>CREATE TABLE ALUMNOS (
+    Nombre VARCHAR2(25),
+    Apellidos VARCHAR2(50)
+);</code></pre>
+</blockquote>
+
+<h3>Ejercicio:</h3>
+
+<p>Crea una tabla <strong>MODULOS</strong>, compuesta de los siguientes atributos:</p>
+
+<ul>
+	<li>Nombre: de tipo <code>VARCHAR2</code> y tama&ntilde;o 100.</li>
+	<li>NumHoras: de tipo <code>NUMBER</code>, sin especificar el tama&ntilde;o.</li>
+</ul>
