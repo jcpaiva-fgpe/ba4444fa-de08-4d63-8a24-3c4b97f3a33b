@@ -1,39 +1,36 @@
 CREATE TABLE regions  
-    ( region_id      NUMBER   
+    ( region_id      NUMERIC   
                      CONSTRAINT region_id_nn NOT NULL 
     ,                CONSTRAINT reg_id_pk  
                         PRIMARY KEY (region_id) 
-    , region_name    VARCHAR2(25)   
+    , region_name    VARCHAR(25)   
     );
 CREATE TABLE countries   
     ( country_id      CHAR(2)   
                       CONSTRAINT country_id_nn NOT NULL 
     ,                 CONSTRAINT country_c_id_pk   
         	         PRIMARY KEY (country_id) 
-    , country_name    VARCHAR2(40)   
-    , region_id       NUMBER   
+    , country_name    VARCHAR(40)   
+    , region_id       NUMERIC   
     ,                 CONSTRAINT countr_reg_fk  
         	         FOREIGN KEY (region_id)  
           	         REFERENCES regions (region_id)   
-    )   
-    ORGANIZATION INDEX;
+    );
 
 CREATE TABLE departments  
-    ( department_id    NUMBER(4) 
+    ( department_id    NUMERIC(4) 
                        CONSTRAINT dept_id_pk  
        		          PRIMARY KEY 
-    , department_name  VARCHAR2(30)  
+    , department_name  VARCHAR(30)  
 	               CONSTRAINT dept_name_nn  NOT NULL  
-    , manager_id       NUMBER(6)  
-    , location_id      NUMBER(4) 
+    , manager_id       NUMERIC(6)  
+    , location_id      NUMERIC(4) 
     );
 
 CREATE SEQUENCE departments_seq  
  START WITH     280  
  INCREMENT BY   10  
- MAXVALUE       9990  
- NOCACHE  
- NOCYCLE;
+ MAXVALUE       9990;
 
 INSERT INTO regions VALUES   
         ( 1  
