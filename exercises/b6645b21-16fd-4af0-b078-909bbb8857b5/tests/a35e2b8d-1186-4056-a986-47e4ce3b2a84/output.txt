@@ -1,1 +1,1 @@
-<table><tbody><tr><th>DEPARTMENT_ID</th><th>DEPARTMENT_NAME</th><th>MANAGER_ID</th><th>LOCATION_ID</th></tr><tr><td>60</td><td>IT</td><td>103</td><td>1400</td></tr></tbody></table>
+<table><tr><th>department_id</th><th>department_name</th><th>manager_id</th><th>location_id</th></tr><tr><td>60</td><td>IT</td><td>103</td><td>1400</td></tr><tr><td>280</td><td>Desarrollo Web</td><td>103</td><td>1700</td></tr></table>
