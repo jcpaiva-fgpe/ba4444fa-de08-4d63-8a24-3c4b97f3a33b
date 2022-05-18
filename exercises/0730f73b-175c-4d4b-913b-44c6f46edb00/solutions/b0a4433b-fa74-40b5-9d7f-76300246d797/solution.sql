@@ -1,4 +1,4 @@
 CREATE TABLE MODULOS (
-    Nombre VARCHAR2(100),
-    NumHoras NUMBER
+    Nombre VARCHAR(100),
+    NumHoras NUMERIC
 );
