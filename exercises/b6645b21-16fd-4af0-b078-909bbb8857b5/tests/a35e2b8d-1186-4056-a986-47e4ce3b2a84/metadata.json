@@ -1,1 +1,1 @@
-{"id":"a35e2b8d-1186-4056-a986-47e4ce3b2a84","arguments":["undefined"],"weight":"1","visible":"true","input":"input.txt","output":"output.txt","timeout":"1","feedback":[{"message":"Has utilizado insert?","weight":"1"}]}
+{"id":"a35e2b8d-1186-4056-a986-47e4ce3b2a84","arguments":["undefined"],"weight":"1","visible":"true","input":"input.txt","output":"output.txt","timeout":"1","feedback":[{"message":"Has utilizado insert?","weight":"1"},{"message":"Should you try INSERT query ","weight":"0"}]}
