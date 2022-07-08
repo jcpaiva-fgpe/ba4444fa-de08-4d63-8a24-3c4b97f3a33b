@@ -1,1 +1,1 @@
-{"id":"b0943b4c-fd1a-45c1-bf58-6ccb9f8fb7b0","arguments":["undefined"],"weight":"0","visible":"true","input":"input.txt","output":"output.html","timeout":"0","feedback":{}}
+{"id":"b0943b4c-fd1a-45c1-bf58-6ccb9f8fb7b0","arguments":["undefined"],"weight":"0","visible":"true","input":"input.txt","output":"output.html","timeout":"0","feedback":[{"message":"create table","weight":"0"}]}
